@@ -7,3 +7,6 @@ Features added:
 4. Handled labels that do NOT fit into the given dimensions
 5. The title in the right section is editable.
 6. The entire layout stays in the center
+
+Features to be added:
+1. Adding icons to the buttons
