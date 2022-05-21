@@ -29,7 +29,7 @@ const map = new Map();
 var currButton=null;
 
 const imgCollection = document.querySelector(".imgOptions");
-var label = document.querySelector("#lname");
+const label = document.querySelector("#lname");
 const imgEle = document.querySelector(".imgClass");
 
 function setCurrButton(button){
@@ -58,8 +58,8 @@ const formInput=document.querySelector("form");
 formInput.addEventListener('submit',function(event){
   event.preventDefault();
   //console.log(label.value);
-  var templable=document.querySelector("#lname");
-  var txt=currButton.querySelector("span");
+  let templable=document.querySelector("#lname");
+  let txt=currButton.querySelector("span");
   txt.innerHTML=getShortenedString(templable.value);
   dataSrc[keyCnt].title=templable.value;
   //label.value=getShortenedString(label.value);
