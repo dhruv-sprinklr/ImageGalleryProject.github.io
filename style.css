@@ -1,11 +1,12 @@
 
 body {
     margin: auto;
-    width: 70%; 
+    width: 90%; 
     padding: 50px;
     padding-top: 20px;
     font-family: 'Avenir', sans-serif; 
     color: #33475b;    
+    
   }
 
 button {
@@ -18,6 +19,8 @@ button {
     border: none;
     min-height: 4ch;
     justify-content: flex-start;
+    border-radius: 5px;
+    text-align: left;
 
 
 }
@@ -43,8 +46,9 @@ button {
   }
 
 .imgClass{
-    width: 320px;
     height: 500px;
+    width: 320px;
+
     object-fit: cover;
     border-radius: 10px;
 }
