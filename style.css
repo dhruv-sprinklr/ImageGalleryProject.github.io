@@ -1,66 +1,66 @@
 
 body {
-    margin: auto;
-    width: 90%; 
-    padding: 50px;
-    padding-top: 20px;
-    font-family: 'Avenir', sans-serif; 
-    color: #33475b;    
-    
+	margin: auto;
+	width: 90%; 
+	padding: 50px;
+	padding-top: 20px;
+	font-family: 'Avenir', sans-serif; 
+	color: #33475b;    
+	
   }
 
 button {
-    margin-right:20px;
-    margin-top: 5px;
-    width: 320px;
-    padding-bottom: 0px;
-    font-size: 1.5ch;
-    border: none;
-    height: 50px;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 5px;
-    text-align: left;
+	margin-right:20px;
+	margin-top: 5px;
+	width: 320px;
+	padding-bottom: 0px;
+	font-size: 1.5ch;
+	border: none;
+	height: 50px;
+	justify-content: flex-start;
+	align-items: center;
+	border-radius: 5px;
+	text-align: left;
 }
 
 
 
 .buttonIcon{
-    height:40px;
-    width:40px;
-    justify-self: start;
-    align-self: flex-start;
-    object-fit: cover;
-    margin-right: 5px;
+	height:40px;
+	width:40px;
+	justify-self: start;
+	align-self: flex-start;
+	object-fit: cover;
+	margin-right: 5px;
 }
 
 .imgOptions{
-    width: 300px;
-    margin-right: 40px;
-    float:top;
+	width: 300px;
+	margin-right: 40px;
+	float:top;
 }
 span{
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 #lname{
-    width:395px;
-    border: none;
+	width:395px;
+	border: none;
 }
 
 .center {
-    height: 100%;
-    min-height: 300px;
-    display: flex;
-    align-items:flex-start;
-    justify-content: center;
+	height: 100%;
+	min-height: 300px;
+	display: flex;
+	align-items:flex-start;
+	justify-content: center;
   
   }
 
 .imgClass{
-    height: 510px;
-    width: 400px;
+	height: 510px;
+	width: 400px;
 
-    object-fit: cover;
-    border-radius: 10px;
+	object-fit: cover;
+	border-radius: 10px;
 }
