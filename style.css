@@ -44,7 +44,7 @@ span{
 }
 
 #lname{
-    width:315px;
+    width:395px;
     border: none;
 }
 
@@ -59,7 +59,7 @@ span{
 
 .imgClass{
     height: 500px;
-    width: 320px;
+    width: 400px;
 
     object-fit: cover;
     border-radius: 10px;
