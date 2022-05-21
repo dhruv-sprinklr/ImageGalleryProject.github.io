@@ -22,12 +22,14 @@ const dataSrc=[
   }
 ]
 //keyCnt will keep track of the index of current button to traverse via arrow keys
-let keyCnt=0;
+var keyCnt=0;
 //to map the buttons to their index
 const map = new Map();
-let currButton=null;
+//the selected button
+var currButton=null;
+
 const imgCollection = document.querySelector(".imgOptions");
-const label = document.querySelector("#lname");
+var label = document.querySelector("#lname");
 const imgEle = document.querySelector(".imgClass");
 
 function setCurrButton(button){
@@ -38,7 +40,7 @@ function setCurrButton(button){
   
   button.style.backgroundColor="blue";
   button.style.color="white";
-  console.log(button);
+  //console.log(button);
   currButton=button;
 
 }
@@ -51,20 +53,43 @@ function getShortenedString(s){
   return shortenedTitle;
 }
 
+//to handle input titles
 const formInput=document.querySelector("form");
 formInput.addEventListener('submit',function(event){
   event.preventDefault();
   //console.log(label.value);
-  
-  currButton.innerText=getShortenedString(label.value);
+  var templable=document.querySelector("#lname");
+  var txt=currButton.querySelector("span");
+  txt.innerHTML=getShortenedString(templable.value);
+  dataSrc[keyCnt].title=templable.value;
+  //label.value=getShortenedString(label.value);
+  //currButton.click();
+
 });
 
-let buttonArray=[];
+//to store buttons(for index based retrieval)
+var buttonArray=[];
+
+//html inside the buttons
+function getButtonContent(text,src){
+  var content=`
+    <img src=${src} class="buttonIcon">
+    <span>${text}</span>
+    `
+  ;
+  return content;
+}
+
+
+//create buttons
 dataSrc.forEach(element => {
   let newEle = document.createElement("button");
-  newEle.innerText=getShortenedString(element.title);
+  newEle.innerHTML=getButtonContent(getShortenedString(element.title),element.previewImage);
   imgCollection.appendChild(newEle);
+
+  //map button to index
   map.set(newEle,buttonArray.length);
+
   buttonArray.push(newEle);
 
   //this is only to set an intial value for current button, when the site is loaded
@@ -77,10 +102,12 @@ dataSrc.forEach(element => {
   //add event listener to the buttons
 
   newEle.addEventListener("click",function(){
-    imgEle.setAttribute("src",element.previewImage);
-    label.setAttribute("value",element.title);
     keyCnt=map.get(newEle);
+    imgEle.setAttribute("src",element.previewImage);
+    //console.log(newEle);
+    document.querySelector("#lname").value=dataSrc[keyCnt].title;
     setCurrButton(newEle);
+
   });
 });
 
@@ -91,15 +118,15 @@ document.addEventListener("keydown", function(event){
   switch(event.keyCode){
     case 38: // Up arrow    
       keyCnt=(keyCnt -1 + sz)%sz;
-      setCurrButton(buttonArray[keyCnt]);
+      //setCurrButton(buttonArray[keyCnt]);
       buttonArray[keyCnt].click();
-      console.log("up");
+      //console.log("up");
        break;
     case 40: // Down arrow
       keyCnt=(keyCnt+1)%sz;
-      setCurrButton(buttonArray[keyCnt]);
+      //setCurrButton(buttonArray[keyCnt]);
       buttonArray[keyCnt].click();
-      console.log("down");
+      //console.log("down");
       break;    
   }
 });
