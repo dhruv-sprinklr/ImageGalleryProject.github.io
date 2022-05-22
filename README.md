@@ -5,6 +5,6 @@ Features added:
 2. Made clicks work on the item
 3. Made arrow key ( up/down ) navigation work
 4. Handled labels that do NOT fit into the given dimensions
-5. The title in the right section is editable.
+5. The title in the right section is editable and reflects in menu upon pressing enter key.
 6. The entire layout stays in the center
 
