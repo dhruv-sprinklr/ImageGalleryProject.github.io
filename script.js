@@ -1,5 +1,5 @@
-
-const dataSrc=[
+//default value
+var dataSrc=[
 	{
 			"previewImage": "https://images.unsplash.com/photo-1561948955-570b270e7c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
 			"title": "cat.jpeg"
@@ -21,6 +21,19 @@ const dataSrc=[
 			"title": "interns-performance-report-may-2022.key"
 	}
 ]
+
+fetch("https://raw.githubusercontent.com/dhruv-sprinklr/dhruv-sprinklr.github.io/main/data.json")
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => {
+    dataSrc = data;
+    
+  })
+  .catch((error) => {
+    console.log("Unable to fetch the data");
+  });
+
 //keyCnt will keep track of the index of current button to traverse via arrow keys
 var keyCnt=0;
 //to map the buttons to their index
@@ -127,6 +140,7 @@ document.addEventListener("keydown", function(event){
 			break;    
 	}
 });
+
 
 
 
