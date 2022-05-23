@@ -64,3 +64,39 @@ span{
 	object-fit: cover;
 	border-radius: 10px;
 }
+
+
+@media screen and (max-width: 600px) {
+
+	.imgOptions{
+		display: block;
+		width: 300px;
+		margin-left:20px;
+		margin-right:10px;
+		float:top;
+		margin-bottom: 10px;
+		align-items: center;
+		justify-content: center;
+	}
+	.center {
+		height: 100%;
+		min-height: 300px;
+		display: block;
+		align-items:center;
+		justify-content: center;
+	  
+	  }
+	  button {
+		margin-right:0px;
+		margin-top: 5px;
+		width: 320px;
+		padding-bottom: 0px;
+		font-size: 1.5ch;
+		border: none;
+		height: 50px;
+		justify-content:center;
+		align-items: center;
+		border-radius: 5px;
+		text-align: left;
+	}
+  }
