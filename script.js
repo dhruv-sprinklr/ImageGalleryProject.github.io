@@ -62,7 +62,7 @@ function setCurrButton(button){
 function getShortenedString(s){
 	let n=s.length;
 	let shortenedTitle=s;
-	if(n>39)shortenedTitle=s.substring(0,11)+"..."+s.substring(n-10,n);
+	if(n>33)shortenedTitle=s.substring(0,11)+"..."+s.substring(n-10,n);
 	return shortenedTitle;
 }
 
