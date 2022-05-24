@@ -32,6 +32,7 @@ button {
 	align-self: flex-start;
 	object-fit: cover;
 	margin-right: 5px;
+	border-radius: 5px;
 }
 
 .imgOptions{
@@ -45,6 +46,7 @@ span{
 
 #lname{
 	width:395px;
+
 	border: none;
 }
 
@@ -63,6 +65,19 @@ span{
 
 	object-fit: cover;
 	border-radius: 10px;
+}
+
+#textTest{
+    position: absolute;
+    visibility: hidden;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+	
+}
+.formId{
+	font-size: 18px;
+	font-family: 'Lucida Sans';
 }
 
 
@@ -105,3 +120,5 @@ span{
 	}
 
   }
+
+

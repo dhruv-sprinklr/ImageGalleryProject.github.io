@@ -57,12 +57,30 @@ function setCurrButton(button){
 	currButton=button;
 
 }
+function getSizeInPixels(text){
+	let test = document.getElementById("lname");
+	let invLabel= document.createElement("div");
+	invLabel.setAttribute("class","formId");
+	invLabel.setAttribute("id","textTest");
+	invLabel.innerText=text;
+	document.querySelector("body").appendChild(invLabel);
+	let width = (invLabel.clientWidth);
+	document.querySelector("body").removeChild(invLabel);
+	return width;
+}
 
 //string after editing middle part with ... to reduce size
 function getShortenedString(s){
 	let n=s.length;
 	let shortenedTitle=s;
-	if(n>33)shortenedTitle=s.substring(0,11)+"..."+s.substring(n-10,n);
+	let overflow=getSizeInPixels(s);
+	overflow-=307; //label size is fixed as per problem statement given
+	if(overflow<0)overflow=0;
+	
+	if(overflow){
+		let fontsize=getSizeInPixels("a");
+		shortenedTitle=s.substring(0,Math.ceil(150/fontsize))+"..."+s.substring(n-Math.ceil(150/fontsize),n);
+	} 
 	return shortenedTitle;
 }
 
@@ -140,7 +158,6 @@ document.addEventListener("keydown", function(event){
 			break;    
 	}
 });
-
 
 
 
